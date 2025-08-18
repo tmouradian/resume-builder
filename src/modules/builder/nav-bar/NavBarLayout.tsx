@@ -130,16 +130,13 @@ const NavBarLayout = () => {
 
   return (
     <nav className="h-14 w-full bg-resume-800 relative flex py-2.5 pl-2 md:pl-5 pr-1 nd:pr-4 items-center shadow-level-8dp z-20 print:hidden">
-      <Link href="/">
-        <Image src={'/icons/resume-icon.png'} alt="logo" height="36" width="36" />
-      </Link>
       <div className="flex-auto flex justify-between items-center xs:ml-3 md:ml-5">
         <NavBarMenu>
           <NavMenuItem
             caption={`Templates (${TOTAL_TEMPLATES_AVAILABLE})`}
             popoverChildren={<TemplateSelect />}
           />
-          <NavMenuItem caption="Colours" popoverChildren={<ThemeSelect />} />
+          <NavMenuItem caption="Colors" popoverChildren={<ThemeSelect />} />
         </NavBarMenu>
         <div className="hidden md:flex">
           <NavBarActions>
