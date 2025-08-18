@@ -12,10 +12,10 @@ export const GLOBAL_MUI_THEME = createTheme({
       600: '#4C667E',
       700: '#3C5268',
       800: '#2E4052',
-      900: '#1C2C3A',
+      900: '#244034',
     },
     primary: {
-      main: '#2E4052',
+      main: '#244034',
     },
   },
   components: {
@@ -26,13 +26,13 @@ export const GLOBAL_MUI_THEME = createTheme({
             backgroundColor: '#FFFFFF',
           },
           '&.Mui-checked > .MuiSwitch-thumb': {
-            backgroundColor: '#59748F', // resume 500 variant
+            backgroundColor: '#244034', // resume 500 variant
           },
           '& + .MuiSwitch-track': {
-            backgroundColor: '#C7D6E4', // resume 100 variant
+            backgroundColor: '#4F665C', // resume 100 variant
           },
           '&.Mui-checked + .MuiSwitch-track': {
-            backgroundColor: '#C7D6E4', // resume 100 variant
+            backgroundColor: '#4F665C', // resume 100 variant
           },
         },
       },
