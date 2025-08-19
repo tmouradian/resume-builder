@@ -40,7 +40,7 @@ const EditSectionContainer = ({
       <div
         className={`bg-resume-100 shadow-sm h-12 w-full ${
           expanded ? `rounded-t-lg` : `rounded-lg`
-        } relative flex items-center justify-between px-4 text-resume-800 font-bold text-lg select-none cursor-pointer z-10`}
+        } relative flex items-center justify-between px-4 text-resume-50 font-bold text-lg select-none cursor-pointer z-10`}
         onClick={clickHandler}
       >
         <span>{title}</span>
