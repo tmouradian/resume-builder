@@ -51,7 +51,8 @@ export const BasicIntro = ({
   profiles?: IProfiles[];
 }) => {
   const isProfileLinkAvailable =
-    profiles &&
+    profiles
+      &&
     profiles.some((profile) => (profile.url.length > 0 ? true : false)) &&
     !image.length;
   return (

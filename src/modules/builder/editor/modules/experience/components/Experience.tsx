@@ -63,7 +63,7 @@ const Experience: React.FC<IExperienceProps> = ({ experienceInfo, currentIndex }
   return (
     <Fragment>
       <TextField
-        label="Comapany name"
+        label="Company name"
         variant="filled"
         value={experienceInfo.name}
         onChange={(e: ChangeEvent<HTMLInputElement>) => {

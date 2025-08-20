@@ -5,7 +5,7 @@ import { AppCacheProvider, createEmotionCache } from '@mui/material-nextjs/v15-p
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import type { AppProps } from 'next/app';
 import { EmotionCache } from '@emotion/cache';
-import { GLOBAL_MUI_THEME } from '../styles/global.theme';
+import { GLOBAL_MUI_THEME } from '@/styles/global.theme';
 import { GlobalStyles } from '@mui/material';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { ThemeProvider } from '@mui/material/styles';

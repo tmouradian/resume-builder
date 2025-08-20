@@ -13,7 +13,6 @@ import {
 import { AVAILABLE_TEMPLATES } from '@/helpers/constants';
 import DEFAULT_RESUME_JSON from '@/helpers/constants/resume-data.json';
 import Image from 'next/image';
-import Link from 'next/link';
 import { NavMenuItem } from './components/MenuItem';
 import { PrintResume } from './components/PrintResume';
 import { TemplateSelect } from './components/TemplateSelect';
@@ -141,25 +140,7 @@ const NavBarLayout = () => {
         <div className="hidden md:flex">
           <NavBarActions>
             <StyledButton variant="text" onClick={exportResumeData}>
-              Export
-            </StyledButton>
-            <StyledButton
-              variant="text"
-              onClick={() => {
-                if (fileInputRef.current) {
-                  const fileElement = fileInputRef.current as HTMLInputElement;
-                  fileElement.click();
-                }
-              }}
-            >
-              Import{' '}
-              <input
-                type="file"
-                hidden
-                ref={fileInputRef}
-                accept="application/json"
-                onChange={handleFileChange}
-              />
+                Save to Profile
             </StyledButton>
             <PrintResume />
           </NavBarActions>
@@ -185,25 +166,7 @@ const NavBarLayout = () => {
           horizontal: 'right',
         }}
       >
-        <MenuItem onClick={exportResumeData}>Export</MenuItem>
-        <MenuItem
-          onClick={() => {
-            if (fileInputRef.current) {
-              const fileElement = fileInputRef.current as HTMLInputElement;
-              fileElement.click();
-            }
-            handleMenuClose();
-          }}
-        >
-          Import
-          <input
-            type="file"
-            hidden
-            ref={fileInputRef}
-            accept="application/json"
-            onChange={handleFileChange}
-          />
-        </MenuItem>
+        <MenuItem onClick={exportResumeData}>Save to Profile</MenuItem>
         <PrintResume isMenuButton />
       </Menu>
       <Toast
