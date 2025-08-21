@@ -25,15 +25,12 @@ const BuilderPage: NextPage = () => {
     useEffect(() => {
         const handleMessage = (event: { origin: string; data: any; }) => {
 
-            console.log("Recieved message", event);
+            console.log("resume-builder: Received message", event);
             // **Important:** Verify the origin of the message for security
 
-            const origins = ["http://localhost:3000",
-                "http://localhost:5000"]
+            const origins = ["http://localhost:3000", "http://localhost:5000", "https://resumecopilot.ai", "https://resume-builder.resumecopilot.ai"]
 
             if (origins.includes(event.origin)) {
-                console.log('Message received from parent:', event.data);
-
                 handleResumeChange(event.data);
             }
         };
@@ -84,6 +81,7 @@ const BuilderPage: NextPage = () => {
         useVoluteeringStore.getState().reset(volunteer);
         useAwards.getState().reset(awards);
         useActivity.getState().reset(activities);
+        useActivity.getState().reset(skills);
     };
 
     return (

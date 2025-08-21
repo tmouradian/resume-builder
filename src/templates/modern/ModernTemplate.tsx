@@ -10,7 +10,7 @@ import { useContext } from 'react';
 import { StateContext } from '@/modules/builder/resume/ResumeLayout';
 import { SectionValidator } from '@/helpers/common/components/ValidSectionRenderer';
 
-export default function MordernTemplate() {
+export default function ModernTemplate() {
   const resumeData = useContext(StateContext);
 
   return (
