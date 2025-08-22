@@ -4,6 +4,7 @@ const nextConfig = {
         unoptimized: true, // Disables Next.js image optimization
     },
     output: 'export',
+    reactStrictMode: false
 };
 
 export default nextConfig;

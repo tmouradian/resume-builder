@@ -52,4 +52,4 @@ export const CUSTOM_THEME_COLOR: IThemeColor = {
   id: 4,
 };
 
-export const DATE_PICKER_FORMAT = 'DD/MM/YYYY';
+export const DATE_PICKER_FORMAT = 'MM/DD/YYYY';

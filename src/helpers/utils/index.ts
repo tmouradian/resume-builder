@@ -8,6 +8,12 @@ export const dateParser = (dateValue: string | Dayjs | null, outputFormat = 'MMM
   return dayjsDate.format(outputFormat);
 };
 
+export const dateParserToExport = (dateValue: string | Dayjs | null, outputFormat = 'MM/DD/YYYY') => {
+    if (dateValue === null) return;
+    const dayjsDate = dayjs(dateValue);
+    return dayjsDate.format(outputFormat);
+};
+
 export const scrollToElement = (ref: MutableRefObject<HTMLDivElement | null>) => {
   ref.current?.scrollIntoView({
     behavior: 'smooth',
@@ -15,3 +21,9 @@ export const scrollToElement = (ref: MutableRefObject<HTMLDivElement | null>) =>
     inline: 'nearest',
   });
 };
+
+export const deepMergeObjects = (...objects) => {
+    const deepCopyObjects = objects.map(object => JSON.parse(JSON.stringify(object)));
+    return deepCopyObjects.reduce((merged, current) => ({ ...merged, ...current }), {});
+};
+

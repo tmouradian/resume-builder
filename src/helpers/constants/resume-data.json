@@ -4,8 +4,8 @@
     "label": "Frontend Engineer",
     "image": "https://randomuser.me/api/portraits/men/18.jpg",
     "email": "janedoe@email.com",
-    "phone": "+91 9876543210",
-    "url": "https://e-resume.vercel.app",
+    "phone": "",
+    "url": "",
     "summary": "I am a web developer having expertise in frontend development and exposure to back- end development. I design and develop web applications using the latest technologies to deliver the product with quality code.",
     "location": {
       "address": "",
@@ -20,8 +20,8 @@
     "profiles": [
       {
         "network": "linkedin",
-        "username": "sadanandpai",
-        "url": "https://www.linkedin.com/in/sadanandpai/"
+        "username": "xxx",
+        "url": "https://www.linkedin.com/in/xxx/"
       },
       {
         "network": "twitter",
@@ -30,8 +30,8 @@
       },
       {
         "network": "github",
-        "username": "sadanandpai",
-        "url": "https://github.com/sadanandpai/"
+        "username": "xxx",
+        "url": "https://github.com/xxx/"
       },
       {
         "network": "hackerrank",
@@ -40,18 +40,18 @@
       },
       {
         "network": "hackerearth",
-        "username": "sadanandpai",
-        "url": "https://www.hackerearth.com/sadanandpai/"
+        "username": "xxx",
+        "url": "https://www.hackerearth.com/xxx/"
       },
       {
         "network": "codechef",
-        "username": "sadanandpai",
-        "url": "https://www.codechef.com/sadanandpai/"
+        "username": "xxx",
+        "url": "https://www.codechef.com/xxx/"
       },
       {
         "network": "leetcode",
-        "username": "sadanandpai",
-        "url": "https://leetcode.com/sadanandpai/"
+        "username": "xxx",
+        "url": "https://leetcode.com/xxx/"
       }
     ]
   },

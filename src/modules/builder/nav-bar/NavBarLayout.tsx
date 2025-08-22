@@ -25,6 +25,11 @@ import {useEducations} from '@/stores/education';
 import {useExperiences} from '@/stores/experience';
 import {useVoluteeringStore} from '@/stores/volunteering';
 import {Menu, MenuItem} from '@mui/material';
+import {dateParser, dateParserToExport, deepMergeObjects} from "@/helpers/utils";
+// @ts-ignore
+import _ from 'lodash';
+
+import education from "@/modules/builder/editor/modules/education/components/Education";
 
 const TOTAL_TEMPLATES_AVAILABLE = Object.keys(AVAILABLE_TEMPLATES).length;
 
@@ -42,7 +47,7 @@ const NavBarLayout = () => {
     };
 
     const exportResumeData = useCallback(() => {
-        const updatedResumeJson = {
+        const resumeBuilderState = {
             ...DEFAULT_RESUME_JSON,
             basics: {
                 ...DEFAULT_RESUME_JSON.basics,
@@ -66,6 +71,49 @@ const NavBarLayout = () => {
 
         let targetOrigin = isDev() ? 'http://localhost:5000/' : 'https://resumecopilot.ai';
 
+
+        // we deep merge here to because we don't want to modify state
+        //
+        let updatedResumeJson = deepMergeObjects(resumeBuilderState);
+
+        // format dates before sending them down
+        //
+        // @ts-ignore
+        _.forEach(updatedResumeJson.education, item => {
+            if (!_.isEmpty(item.endDate)) {
+                item.endDate = dateParserToExport(item.endDate);
+            }
+            if (!_.isEmpty(item.startDate)) {
+                item.startDate = dateParserToExport(item.startDate);
+            }
+        });
+        _.forEach(updatedResumeJson.work, item => {
+            if (!_.isEmpty(item.endDate)) {
+                item.endDate = dateParserToExport(item.endDate);
+            }
+            if (!_.isEmpty(item.startDate)) {
+                item.startDate = dateParserToExport(item.startDate);
+            }
+        });
+        _.forEach(updatedResumeJson.awards, item => {
+            if (!_.isEmpty(item.endDate)) {
+                item.endDate = dateParserToExport(item.endDate);
+            }
+            if (!_.isEmpty(item.startDate)) {
+                item.startDate = dateParserToExport(item.startDate);
+            }
+        });
+        _.forEach(updatedResumeJson.volunteer, item => {
+            if (!_.isEmpty(item.endDate)) {
+                item.endDate = dateParserToExport(item.endDate);
+            }
+            if (!_.isEmpty(item.startDate)) {
+                item.startDate = dateParserToExport(item.startDate);
+            }
+        });
+
+        // post updated Resume with all the correct dates
+        //
         window.parent.postMessage(updatedResumeJson, targetOrigin);
     }, []);
 
